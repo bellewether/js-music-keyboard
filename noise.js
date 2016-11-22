@@ -9,4 +9,10 @@ $(document).ready( function() {
     var note = $(this).html();
     playNote(note);
   });
+
+  $( 'body' ).keydown( function(event) {
+    var noteAudio = $( '#' + event.key + 'Audio')[0];
+    noteAudio.play();
+  });
+  
 });
